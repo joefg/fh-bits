@@ -1,5 +1,5 @@
 [project]
-name = "fasthtml-bits"
+name = "fh-bits"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -8,12 +8,18 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "httpx2>=2.16.0",
     "python-fasthtml>=0.14.18",
 ]
 
 [project.scripts]
-fasthtml-bits = "fh_bits:main"
+fh_bits = "fh_bits:main"
 
 [build-system]
 requires = ["uv_build>=0.11.21,<0.12.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
