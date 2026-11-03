@@ -1,5 +1,6 @@
 from fasthtml.common import Meta
 
+
 def Og(tag, content): return Meta(property=f"og:{tag}", content=content)
 
 # Required
