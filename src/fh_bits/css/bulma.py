@@ -1,0 +1,5 @@
+from fasthtml.common import Link
+
+headers = (
+    Link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css")
+)
