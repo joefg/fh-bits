@@ -7,7 +7,9 @@ authors = [
     { name = "joefg", email = "me@jfg.name" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "python-fasthtml>=0.14.18",
+]
 
 [project.scripts]
 fasthtml-bits = "fasthtml_bits:main"
