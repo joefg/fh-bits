@@ -1,5 +1,6 @@
 from fh_bits.patterns import pipeline
 
+
 def test_pipeline_works():
     p = pipeline.compose(
         lambda x: x + 1,

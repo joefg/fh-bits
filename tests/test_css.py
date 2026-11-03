@@ -1,7 +1,7 @@
 import httpx2
-import pytest
 
 from fh_bits.css import blades, bulma, daisy, web_awesome
+
 
 def test_get_blades():
     blades_url = blades.headers.href
@@ -13,11 +13,12 @@ def test_get_bulma():
 
 def test_get_daisy():
     daisy_gets = [
-        httpx2.get((h.href or h.src)).is_success for h in daisy.headers
+        httpx2.get(h.href or h.src).is_success for h in daisy.headers
     ]
     assert all(daisy_gets)
+
 def test_get_web_awesome():
     wa_gets = [
-        httpx2.get((h.href or h.src)).is_success for h in web_awesome.headers
+        httpx2.get(h.href or h.src).is_success for h in web_awesome.headers
     ]
     assert all(wa_gets)
